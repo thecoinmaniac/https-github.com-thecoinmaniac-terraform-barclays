@@ -17,6 +17,13 @@ module "vpc" {
   vpc_cidr_block = "${var.vpc_cidr_block}"
 }
 
+module "igw" {
+  source = "./igw"
+  vpc_id      = "${module.vpc.id}"
+  vpc_name    = "${var.vpc_name}"
+  
+}
+
 module "subnet_public" {
   source = "./sn-public"
 
