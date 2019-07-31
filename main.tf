@@ -26,3 +26,13 @@ module "subnet_public" {
   subnet_cidr = "${var.subnet_public_cidr}"
   subnet_az   = "${var.subnet_public_az}"
 }
+
+module "subnet_public_01" {
+  source = "./sn-public"
+
+  vpc_id      = "${module.vpc.id}"
+  vpc_region  = "${module.vpc.region}"
+  subnet_name = "${var.subnet_public_01}"
+  subnet_cidr = "${var.subnet_public_cidr_01}"
+  subnet_az   = "${var.subnet_public_az_01}"
+}

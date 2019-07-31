@@ -10,7 +10,7 @@ variable "vpc_cidr_block" {
     default = "10.0.0.0/16"
 }
 
-# Public Subnet Config
+# Public Subnet 00 Config
 variable "subnet_public" {
   description = "Public subnet for VPC"
   default     = "peru"
@@ -24,4 +24,20 @@ variable "subnet_public_cidr" {
 variable "subnet_public_az" {
   description = "Availability zone for public subnet"
   default     = "us-east-2a"
+}
+
+# Public Subnet 01 Config
+variable "subnet_public_01" {
+  description = "Public subnet for VPC"
+  default     = "peru_01"
+}
+
+variable "subnet_public_cidr_01" {
+  description = "CIDR for public subnet_01"
+  default     = "10.0.2.0/24"
+}
+
+variable "subnet_public_az_01" {
+  description = "Availability zone for public subnet_01"
+  default     = "us-east-2b"
 }
