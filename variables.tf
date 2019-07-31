@@ -41,3 +41,19 @@ variable "subnet_public_az_01" {
   description = "Availability zone for public subnet_01"
   default     = "us-east-2b"
 }
+
+# Public Subnet 02 Config
+variable "subnet_public_02" {
+  description = "No.3 Public subnet for VPC"
+  default     = "peru_02"
+}
+
+variable "subnet_public_cidr_02" {
+  description = "CIDR for public subnet_02"
+  default     = "10.0.3.0/24"
+}
+
+variable "subnet_public_az_02" {
+  description = "Availability zone for public subnet_02"
+  default     = "us-east-2c"
+}
