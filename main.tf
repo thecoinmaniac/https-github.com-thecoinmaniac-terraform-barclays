@@ -32,6 +32,7 @@ module "subnet_public" {
   subnet_name = "${var.subnet_public}"
   subnet_cidr = "${var.subnet_public_cidr}"
   subnet_az   = "${var.subnet_public_az}"
+  route_table_id = "${module.igw.public_rt_id}"
 }
 
 module "subnet_public_01" {
@@ -42,4 +43,5 @@ module "subnet_public_01" {
   subnet_name = "${var.subnet_public_01}"
   subnet_cidr = "${var.subnet_public_cidr_01}"
   subnet_az   = "${var.subnet_public_az_01}"
+  route_table_id = "${module.igw.public_rt_id}"
 }

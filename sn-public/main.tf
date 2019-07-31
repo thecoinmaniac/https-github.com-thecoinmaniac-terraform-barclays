@@ -12,6 +12,6 @@ resource "aws_subnet" "public" {
 ## Associate the routing table to public subnet
 resource "aws_route_table_association" "rt_assn" {
   subnet_id      = "${aws_subnet.public.id}"
-  route_table_id = "${module.igw.public_rt_id}"
+  route_table_id = "${var.route_table_id}"
 }
 
