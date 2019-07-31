@@ -57,3 +57,19 @@ variable "subnet_public_az_02" {
   description = "Availability zone for public subnet_02"
   default     = "us-east-2c"
 }
+
+# Private Subnet 1 Config
+variable "subnet_private_01" {
+  description = "Private subnet for demo Network"
+  default     = "cali"
+}
+
+variable "subnet_private_01_cidr" {
+  description = "CIDR for internal subnet"
+  default     = "10.0.128.0/24"
+}
+
+variable "subnet_private_01_az" {
+  description = "Region for private subnet"
+  default     = "us-east-2a"
+}
