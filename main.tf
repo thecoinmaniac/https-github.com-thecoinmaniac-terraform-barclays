@@ -65,4 +65,6 @@ module "subnet_private_01" {
   subnet_name = "${var.subnet_private_01}"
   subnet_cidr = "${var.subnet_private_01_cidr}"
   subnet_az   = "${var.subnet_private_01_az}"
+  route_table_id = "${module.igw.private_rt_id}"
+
 }
