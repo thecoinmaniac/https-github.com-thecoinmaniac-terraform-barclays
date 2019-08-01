@@ -69,11 +69,21 @@ module "subnet_private_01" {
 
 }
 
+module "bastion_sg" {
+  source = "./bastion_sg"
+
+  sg_name  = "${var.bastion_sg}"
+  vpc_id = "${module.vpc.id}"
+  
+}
+
+
 module "bastion_server" {
   source = "./ec2"
   
   ami_name         = "${var.bastion_ami}"
   instance_type    = "${var.bastion_instance_type}"
+  security_groups  = ["${module.bastion_sg.sg_id}"]
   subnet_id        = "${module.subnet_public.id}"
 }
 

@@ -3,7 +3,7 @@ variable "vpc_region" {
 }
 
 variable "vpc_name" {
-    default = "test"
+    default = "Terraform_Barclays"
 }
 
 variable "vpc_cidr_block" {
@@ -72,6 +72,11 @@ variable "subnet_private_01_cidr" {
 variable "subnet_private_01_az" {
   description = "Region for private subnet"
   default     = "us-east-2a"
+}
+
+variable "bastion_sg" {
+  description = "bastian server security group"
+  default = "TB_bastion_sg"
 }
 
 
