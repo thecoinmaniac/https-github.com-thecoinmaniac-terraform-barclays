@@ -83,7 +83,7 @@ module "bastion_server" {
   
   ami_name         = "${var.bastion_ami}"
   instance_type    = "${var.bastion_instance_type}"
-  security_groups  = "${module.bastion_sg.sg_id}"
+  security_groups  = ["${module.bastion_sg.sg_id}"]
   subnet_id        = "${module.subnet_public.id}"
 }
 
