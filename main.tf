@@ -68,3 +68,10 @@ module "subnet_private_01" {
   route_table_id = "${module.igw.private_rt_id}"
 
 }
+
+module "bastion_server" {
+  source = "./ec2"
+  ami              = "${var.bastion_ami}"
+  instance_type    = "${var.bastion_instance_type}"
+  subnet_id        = "${var.subnet_public}"
+}

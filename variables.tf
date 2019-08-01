@@ -73,3 +73,14 @@ variable "subnet_private_01_az" {
   description = "Region for private subnet"
   default     = "us-east-2a"
 }
+
+
+variable "bastion_ami" {
+  description = "AMI for bastion Server"
+  default = "ami-02f706d959cedf892"
+}
+
+variable "bastion_instance_type" {
+  description = "Instance type for bastion server"
+  default = "t2.micro"
+}
