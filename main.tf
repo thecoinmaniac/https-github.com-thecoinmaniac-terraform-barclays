@@ -71,7 +71,8 @@ module "subnet_private_01" {
 
 module "bastion_server" {
   source = "./ec2"
-  ami              = "${var.bastion_ami}"
+  
+  ami_name         = "${var.bastion_ami}"
   instance_type    = "${var.bastion_instance_type}"
   subnet_id        = "${var.subnet_public}"
 }
