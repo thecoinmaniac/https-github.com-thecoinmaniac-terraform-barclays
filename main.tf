@@ -74,5 +74,7 @@ module "bastion_server" {
   
   ami_name         = "${var.bastion_ami}"
   instance_type    = "${var.bastion_instance_type}"
-  subnet_id        = "${var.subnet_public}"
+  subnet_id        = "${module.subnet_public.id}"
 }
+
+
